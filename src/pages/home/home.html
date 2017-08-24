@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>To</ion-label>
+      <ion-input [(ngModel)]="DataTo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>CC</ion-label>
+      <ion-input [(ngModel)]="DataCc" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Subject</ion-label>
+      <ion-input [(ngModel)]="DataSubject" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Text</ion-label>
+      <ion-input [(ngModel)]="DataBody" type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div>
+    <button ion-button full (click)="send()">Send Email</button>
+  </div>
+</ion-content>
